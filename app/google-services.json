@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "161500323898",
+    "firebase_url": "https://firemessage-8ae84.firebaseio.com",
+    "project_id": "firemessage-8ae84",
+    "storage_bucket": "firemessage-8ae84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161500323898:android:b9c5ba9d6224ec56",
+        "android_client_info": {
+          "package_name": "com.example.chatapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161500323898-iko6fdln8ilq1kak6gn72nf8to0cjrne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNbrtomK2gkbt8obnPNYHb4Bzv34EW6_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161500323898-iko6fdln8ilq1kak6gn72nf8to0cjrne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
