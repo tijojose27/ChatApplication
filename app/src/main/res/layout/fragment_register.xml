@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <ImageView
+            android:id="@+id/register_image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            tools:srcCompat="@tools:sample/avatars"/>
+
+
+    <EditText
+            android:id="@+id/email_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionNext"
+            android:hint="UserName"/>
+
+    <EditText
+            android:id="@+id/password_text_view"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:hint="Password"/>
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_material_button"
+            android:text="Register"
+            android:layout_margin="40dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+            app:cornerRadius="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+    <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_material_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:layout_margin="40dp"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            app:cornerRadius="22dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+            android:backgroundTint="@color/colorPrimaryDark"
+    />
+
+</LinearLayout>
