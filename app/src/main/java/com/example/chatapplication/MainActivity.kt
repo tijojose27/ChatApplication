@@ -9,6 +9,7 @@ import android.provider.MediaStore
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.backgroundDrawable
@@ -65,6 +66,24 @@ class MainActivity : AppCompatActivity() {
         ref.putFile(selectedPhotoUri!!)
             .addOnSuccessListener {
                 Log.e("PHOTO", "photo is saved : ${it.metadata?.path}")
+
+                ref.downloadUrl.addOnSuccessListener {
+                    Log.e("PHOTO", "path is $it")
+
+                    saveUsertToFirebaseDatabase(it.toString())
+                }
+            }
+    }
+
+    private fun saveUsertToFirebaseDatabase(profileImageUrl:String) {
+        var uid = FirebaseAuth.getInstance().uid ?:""
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
+        val user = User(uid, email_text_view.text.toString(), profileImageUrl,   password_text_view.text.toString())
+        ref.setValue(user)
+            .addOnSuccessListener {
+                Log.e("STUFF", "finally saved user to database")
+            }.addOnFailureListener {
+                Log.e("STUFF", "user not saved to database")
             }
     }
 
